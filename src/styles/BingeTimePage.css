@@ -276,7 +276,22 @@ footer {
     position: static;
     margin-top: 20px;
     padding: 0 20px;
+
   }
+  .socials li {
+  position: relative;
+  width: 40px;
+  height: 40px;
+}
+  .socials li img {
+  width: 60%;
+  height: 50%;
+  object-fit: contain;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.3s;
+}
 
   .main-content {
     padding-bottom: 0; /* remove extra space if you had added */
