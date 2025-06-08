@@ -23,7 +23,7 @@ function BingeTimePage() {
     { text: '🔥 fried 40 dosas at a roadside stall', time: 0.25 },
     { text: '📚 finished reading 5 chapters of your favorite book', time: 2 },
     { text: '🤣 argued with relatives about your job and their son\'s job', time: 1 },
-    { text: '🛵 completed 120 Swiggy deliveries on a Scooty Pep', time: 0.5 },
+    { text: '🛵 completed 120 Swiggy deliveries on a Scooty Pep per day', time: 0.5 },
     { text: '🛕 attended 10 full-length Telugu weddings', time: 5 },
     { text: '🎮 won 100 chicken dinners in PUBG with your squad', time: 0.75 },
     { text: '📞 heard "hello, who\'s this?" from unknown numbers', time: 0.1 }
@@ -59,7 +59,7 @@ function BingeTimePage() {
   }, [isCalculating]);
   
   const handleVideoEnd = () => {
-    if (playCount <= 3) {
+    if (playCount <1) {
       setPlayCount(prev => prev + 1);
       if (videoRef.current) {
         videoRef.current.play();
@@ -81,7 +81,7 @@ function BingeTimePage() {
   };
 
   const handleParrotClick = () => {
-    if (shownActivities.length >= activityList.length) {
+    if (shownActivities.length >= 5) {
       setShowOutOfIdeasPopup(true);
       return;
     }
