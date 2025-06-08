@@ -37,24 +37,6 @@ function SearchBar({ onSearchResults }) {
         value={query}
         onChange={e => setQuery(e.target.value)}
       />
-      
-      {query && (
-        <div className="search-results">
-          {isLoading ? (
-            <p>Loading...</p>
-          ) : results.length > 0 ? (
-            results.map(show => (
-              <ShowCard 
-                key={show.id} 
-                show={show} 
-                onClick={() => setQuery('')}
-              />
-            ))
-          ) : (
-            <p>No results found</p>
-          )}
-        </div>
-      )}
     </div>
   );
 }

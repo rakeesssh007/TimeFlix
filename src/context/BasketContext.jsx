@@ -21,9 +21,9 @@ export function BasketProvider({ children }) {
     const sampleShows = [
       { id: 269, name: 'Peaky Blinders', count: 4, completed: true },
       { id: 82, name: 'Game of Thrones', count: 2, completed: true },
-      { id: 2993, name: 'Dark', count: 2, completed: true },
+      { id: 17861, name: 'Dark', count: 2, completed: true },
       { id: 169, name: 'Breaking Bad', count: 1, completed: true },
-      { id: 21047, name: 'You', count: 1, completed: true }
+      { id: 26856, name: 'You', count: 1, completed: true }
     ];
     
     const fetchShow = (id) => 

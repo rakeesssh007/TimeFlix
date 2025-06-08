@@ -1,26 +1,25 @@
 import React from 'react';
 import '../styles/ActivityList.css';
 
-function ActivityList({ activities, bingeHours }) {
+function ActivityList({ activity, bingeHours }) {
+  if (!activity) return null;
+
+  const emoji = activity.text.split(' ')[0];
+  const description = activity.text.split(' ').slice(1).join(' ');
+  const times = Math.floor(bingeHours / activity.time);
+
   return (
     <div className="activity-list">
       <h3>What You Could Have Done Instead:</h3>
-      <ul>
-        {activities.map((activity, index) => {
-          const times = Math.floor(bingeHours / activity.time);
-          return (
-            <li key={index} className="activity-item">
-              <span className="activity-emoji">{activity.text.split(' ')[0]}</span>
-              <div className="activity-details">
-                <p>{activity.text}</p>
-                <div className="activity-count">
-                  {times > 0 ? `${times} times` : "Not even once 😅"}
-                </div>
-              </div>
-            </li>
-          );
-        })}
-      </ul>
+      <div className="activity-item single">
+        <span className="activity-emoji">{emoji}</span>
+        <div className="activity-details">
+          <p>{description}</p>
+          <div className="activity-count">
+            {times > 0 ? `${times} times` : 'Not even once 😅'}
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
