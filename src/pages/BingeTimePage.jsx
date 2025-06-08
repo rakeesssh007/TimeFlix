@@ -22,7 +22,7 @@ function BingeTimePage() {
     { text: '🚗 traveled from Chennai to Hyderabad and back', time: 20 },
     { text: '🔥 fried 40 dosas at a roadside stall', time: 0.25 },
     { text: '📚 finished reading 5 chapters of your favorite book', time: 2 },
-    { text: '😆 argued with relatives about your job and their son\'s job', time: 1 },
+    { text: '🤣 argued with relatives about your job and their son\'s job', time: 1 },
     { text: '🛵 completed 120 Swiggy deliveries on a Scooty Pep', time: 0.5 },
     { text: '🛕 attended 10 full-length Telugu weddings', time: 5 },
     { text: '🎮 won 100 chicken dinners in PUBG with your squad', time: 0.75 },
@@ -44,7 +44,7 @@ function BingeTimePage() {
         if (videoRef.current) {
           videoRef.current.play();
         }
-      }, 1000);
+      }, 2000);
     };
     
     calculateBingeTime();
@@ -108,17 +108,18 @@ function BingeTimePage() {
           </div>
         </div>
       )}
-      
+      <div className="main-content">
       {isCalculating && (
         <div className="calculating-overlay">
-          <div className="calculating-popup">
-            <p>Calculating binge time...</p>
-          </div>
-        </div>
+         <div className="calculating-popup">
+           <div className="spinner"></div>
+          <p>Calculating binge time...</p>
+         </div>
+    </div>
       )}
       
       <div className={`content ${isCalculating ? 'hidden' : ''}`}>
-        <h2>POV: Your face after seeing the number</h2>
+        <h2>POV: Your face after seeing the number 😆</h2>
         
         <video 
           ref={videoRef}
@@ -150,7 +151,7 @@ function BingeTimePage() {
           "Ask the Parrot 🦜"}
         </button>
       </div>
-      
+      </div>
       <footer>
         <ul className="socials">
           <li>
