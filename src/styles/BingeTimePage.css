@@ -282,7 +282,6 @@ footer {
     gap: 0px;
   }
 .socials li {
-  position:absolute;
   width: 60px;
   height: 60px;
 }
