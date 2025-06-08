@@ -275,6 +275,7 @@ footer {
   footer {
     position: static;
     margin-top: 40px;
+    padding: 0 20px;
   }
 
   .main-content {
