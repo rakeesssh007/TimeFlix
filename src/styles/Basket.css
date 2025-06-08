@@ -1,0 +1,61 @@
+.basket {
+  background-color: white;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  min-width: 250px;
+}
+
+.basket h3 {
+  margin-bottom: 15px;
+  color: #333;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.basket-counts {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.basket-counts p {
+  background-color: #f8f8f8;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+.basket-items {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.basket-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.basket-item:last-child {
+  border-bottom: none;
+}
+
+.item-name {
+  font-weight: bold;
+  color: #333;
+}
+
+.item-details {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .basket {
+    min-width: 100%;
+  }
+}

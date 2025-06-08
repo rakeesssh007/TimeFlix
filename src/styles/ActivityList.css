@@ -1,0 +1,47 @@
+.activity-list {
+  width: 100%;
+  max-width: 600px;
+  margin-top: 20px;
+}
+
+.activity-list h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.activity-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.activity-item {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+}
+
+.activity-emoji {
+  font-size: 2rem;
+  margin-right: 15px;
+}
+
+.activity-details {
+  flex: 1;
+}
+
+.activity-details p {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+.activity-count {
+  font-size: 0.9rem;
+  color: #e50914;
+  font-weight: bold;
+}
